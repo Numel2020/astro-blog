@@ -1,8 +1,7 @@
 ---
 import '../styles/global.css';
+import Head from '../components/Head.astro';
 import Header from '../components/Header.astro';
-import Hamburger from '../components/Hamburger.astro';
-import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 
 const { title } = Astro.props;
@@ -10,10 +9,9 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<Header title={title}/>
+	<Head title={title}/>
 	<body>
-	    <Hamburger />
-	    <Navigation />
+	    <Header />
 	    <h1>{title}</h1>
 	    <slot />
 	    <Footer />
